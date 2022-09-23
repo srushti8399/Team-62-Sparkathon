@@ -22,37 +22,54 @@ import { BookSessionComponent } from './mock/book-session/book-session.component
 import { HomeComponent } from './home/home.component';
 import { CreateUserCanDeactivateGuardService } from './dashboard/service/create-user-candeactivate-guard.service';
 import { DashService } from './auth/authservice/dash.service';
+import { ConnectprofileComponent } from './connect/connectprofile/connectprofile.component';
+import { SearchComponent } from './connect/search/search.component';
+import { Displaydata } from './ehostel/Display/Products_UI/display.component';
+import { ProductDescriptionComponent } from './ehostel/product-description/product-description.component';
 
 const routes: Routes = [
-
-  {path:"login",component:LoginComponent,canActivate:[DashService]},
-  {path:"register",component:RegisterComponent,canActivate:[DashService]},
-  {path:"dashboard",component:DashboardComponent,canActivate:[AuthService]},
-  {path:"editprofile",component:ProfileComponent,canActivate:[AuthService], canDeactivate: [CreateUserCanDeactivateGuardService]},
-  {path:"viewprofile",component:ViewProfileComponent,canActivate:[AuthService]},
-
-  
-  {path:"home",component:HomeComponent,canActivate:[DashService]},
-  {path:'mock', component:MockComponent,canActivate:[AuthService]},
-  {path:'mock/schedule', component:ScheduleComponent,canActivate:[AuthService]},
-  {path:'mock/schedule/book-session', component:BookSessionComponent,canActivate:[AuthService]},
+  { path: "search", component: SearchComponent, canActivate: [] },
+  { path: "searchResults/:keyword/:category", component: SearchComponent, canActivate: [] },
+  { path: "profile/:ClgID", component: ConnectprofileComponent, canActivate: [] },
 
 
+  { path: "login", component: LoginComponent, canActivate: [DashService] },
+  { path: "register", component: RegisterComponent, canActivate: [DashService] },
+  { path: "dashboard", component: DashboardComponent, canActivate: [AuthService] },
+  { path: "editprofile", component: ProfileComponent, canActivate: [AuthService], canDeactivate: [CreateUserCanDeactivateGuardService] },
+  { path: "viewprofile", component: ViewProfileComponent, canActivate: [AuthService] },
 
-  {path:'create',component:CreateintexpComponent,canActivate:[AuthService]},
-  {path:'experiencelist',component:IntexpComponent,canActivate:[AuthService]},
-  {path:'view/:id',component:ViewComponent,canActivate:[AuthService]},
-  {path:'edit/:id',component:EditComponent,canActivate:[AuthService]},
+
+  { path: "home", component: HomeComponent, canActivate: [DashService] },
+  { path: 'mock', component: MockComponent, canActivate: [AuthService] },
+  { path: 'mock/schedule', component: ScheduleComponent, canActivate: [AuthService] },
+  { path: 'mock/schedule/book-session', component: BookSessionComponent, canActivate: [AuthService] },
+
+
+
+  { path: 'create', component: CreateintexpComponent, canActivate: [AuthService] },
+  { path: 'experiencelist', component: IntexpComponent, canActivate: [AuthService] },
+  { path: 'view/:id', component: ViewComponent, canActivate: [AuthService] },
+  { path: 'edit/:id', component: EditComponent, canActivate: [AuthService] },
+
+
+  { path: 'addcompany', component: AddCompanyComponent, canActivate: [AuthService] },
+  { path: 'company', component: CompaniesComponent, canActivate: [AuthService] },
+  { path: 'viewcompany/:id', component: ViewCompanyComponent, canActivate: [AuthService] },
+  { path: 'editcompany/:id', component: EditCompanyComponent, canActivate: [AuthService] },
+  { path: 'deletecompany/:id', component: DeleteCompanyComponent, canActivate: [AuthService] },
+  { path: 'deletecompanydialogue/:id', component: DialogDeleteComponent, canActivate: [AuthService] },
  
 
-  {path:'addcompany',component:AddCompanyComponent,canActivate:[AuthService]},
-  {path:'company',component:CompaniesComponent,canActivate:[AuthService]},
-  {path:'viewcompany/:id',component:ViewCompanyComponent,canActivate:[AuthService]},
-  {path:'editcompany/:id',component:EditCompanyComponent,canActivate:[AuthService]},
-  {path:'deletecompany/:id',component:DeleteCompanyComponent,canActivate:[AuthService]},
-  {path:'deletecompanydialogue/:id',component:DialogDeleteComponent,canActivate:[AuthService]},
-  {path:'',component:HomeComponent,canActivate:[DashService]},
-   {path:"**",component:DashboardComponent,canActivate:[AuthService]}
+  
+  {path:"display",component:Displaydata},
+  {path:"product-description",component:ProductDescriptionComponent},
+
+  { path: '', component: HomeComponent, canActivate: [DashService] },
+  { path: "**", component: DashboardComponent, canActivate: [AuthService] },
+
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

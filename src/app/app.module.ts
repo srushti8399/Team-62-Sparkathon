@@ -19,22 +19,25 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AuthModule } from './auth/auth.module';
 
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { FooterModule } from './footer/footer.module';
 import { HomeModule } from './home/home.module';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatRadioModule } from '@angular/material/radio';
 import { MockDbService } from './mock/mock.db.service';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CreateUserCanDeactivateGuardService } from './dashboard/service/create-user-candeactivate-guard.service';
 import { DashService } from './auth/authservice/dash.service';
+import { ConnectModule } from './connect/connect.module';
+import { EhostelModule } from './ehostel/ehostel.module';
+
 
 @NgModule({
   declarations: [
     AppComponent
-    
-    
-    
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -57,10 +60,12 @@ import { DashService } from './auth/authservice/dash.service';
     MatProgressSpinnerModule,
     HttpClientModule,
     FooterModule,
-    HomeModule,MatDatepickerModule,MatRadioModule
-    
+    HomeModule, MatDatepickerModule, MatRadioModule,
+    ConnectModule,
+    EhostelModule,
+
   ],
-  providers: [NavbarComponent,AuthService,InterviewExperienceDBService,CompanyDbService,MockDbService,CreateUserCanDeactivateGuardService,DashService],
+  providers: [NavbarComponent, AuthService, InterviewExperienceDBService, CompanyDbService, MockDbService, CreateUserCanDeactivateGuardService, DashService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

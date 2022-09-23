@@ -216,5 +216,327 @@
       "topic": "System design",
       "id": 9
     }
+  ],
+  "UserProfile": [
+    {
+      "ClgID": 1204910,
+      "id": 1,
+      "Name": "Pooja",
+      "LastName": "Sain",
+      "Address": "Bhiwani",
+      "Dept": "CSE",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nostrum at deleniti, magnam veniam voluptatem repudiandae. Aliquid non ullam voluptatibus porro neque, repellat, dolorem earum debitis autem sequi necessitatibus maxime, molestiae praesentium quisquam! Recusandae aspernatur harum delectus nulla consequuntur. Explicabo amet necessitatibus iusto!",
+      "startingyr": 2019,
+      "EndYr": 2022,
+      "Course": "MCA",
+      "Gender": "Female",
+      "dob": "6 August 1999",
+      "EmailId": "sainpooja@gmail.com",
+      "Contactnumber": "7988499347",
+      "ProfilePIc": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+      "SkillSet": [
+        {
+          "Skills": "HTML",
+          "Rattings": "70"
+        },
+        {
+          "Skills": "CSS",
+          "Rattings": "70"
+        },
+        {
+          "Skills": "Angular",
+          "Rattings": "90"
+        },
+        {
+          "Skills": "Python",
+          "Rattings": "56"
+        }
+      ],
+      "Hobbies": [
+        {
+          "name": "Art",
+          "certificate": "https://76crb34usu-flywheel.netdna-ssl.com/wp-content/uploads/2017/11/Dance_award_certificate.jpg"
+        }
+      ],
+      "Certificates": [
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "HackerRank",
+          "issueDate": "06/10/2022",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://ik.imagekit.io/trainingbasket1/wp-content/uploads/2020/07/Certificate-1024x725.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ClgID": "7413833",
+      "profile": "Admin",
+      "Name": "Name2",
+      "LastName": "",
+      "Address": "XYZ",
+      "Dept": "Dept2",
+      "startingyr": 2020,
+      "EndYr": 2023,
+      "Course": "Course2",
+      "EmailId": "2@gmail.com",
+      "Contactnumber": 1234567892,
+      "ProfilePIc": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nostrum at deleniti, magnam veniam voluptatem repudiandae. Aliquid non ullam voluptatibus porro neque, repellat, dolorem earum debitis autem sequi necessitatibus maxime, molestiae praesentium quisquam! Recusandae aspernatur harum delectus nulla consequuntur. Explicabo amet necessitatibus iusto!",
+      "SkillSet": [
+        {
+          "Skills": "Python",
+          "Rattings": "12"
+        },
+        {
+          "Skills": "CSS",
+          "Rattings": "12"
+        },
+        {
+          "Skills": "Angular",
+          "Rattings": "70"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ClgID": 1831112,
+      "Name": "Shailesh",
+      "LastName": "",
+      "profile": "Student",
+      "ProfilePIc": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+      "Contactnumber": 7413833024,
+      "EmailId": "3@gmail.com",
+      "Course": "B.TECH",
+      "startingyr": 2018,
+      "EndYr": 2022,
+      "Gender": "MALE",
+      "dob": "01 feb 2001",
+      "Dept": "ECE",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nostrum at deleniti, magnam veniam voluptatem repudiandae. Aliquid non ullam voluptatibus porro neque, repellat, dolorem earum debitis autem sequi necessitatibus maxime, molestiae praesentium quisquam! Recusandae aspernatur harum delectus nulla consequuntur. Explicabo amet necessitatibus iusto!",
+      "SkillSet": [
+        {
+          "Skills": "Angular",
+          "Rattings": 70
+        },
+        {
+          "Skills": "Java",
+          "Rattings": 40
+        },
+        {
+          "Skills": "HTML",
+          "Rattings": 90
+        }
+      ],
+      "Address": "XYZ",
+      "Hobbies": [
+        {
+          "name": "Dancing",
+          "certificate": "https://76crb34usu-flywheel.netdna-ssl.com/wp-content/uploads/2017/11/Dance_award_certificate.jpg"
+        },
+        {
+          "name": "Singing",
+          "certificate": "https://th.bing.com/th/id/OIP.6bIy0DVmY1KnDTg3JvuIdwHaFP?pid=ImgDet&rs=1"
+        }
+      ],
+      "Certificates": [
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "HackerRank",
+          "issueDate": "06/10/2022",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://ik.imagekit.io/trainingbasket1/wp-content/uploads/2020/07/Certificate-1024x725.png"
+        },
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "JanBaskTraininf",
+          "issueDate": "06/10/2020",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://janbask.nyc3.digitaloceanspaces.com/jt/images/Python-certificate.jpg"
+        }
+      ]
+    },
+    {
+      "ClgID": 1204912,
+      "id": 4,
+      "Name": "Saurabh",
+      "LastName": "Vaishya",
+      "Address": "Mumbai, Maharashtra",
+      "Dept": "Electronics and Tele",
+      "startingyr": 2021,
+      "EndYr": 2025,
+      "Course": "Angular",
+      "EmailId": "saurabh294vaishya@gmail.com",
+      "Contactnumber": 1234567892,
+      "Gender": "Female",
+      "dob": "2 Feb. 2000",
+      "ProfilePIc": "https://machinelearningknowledge.ai/wp-content/uploads/2021/04/DSC_0003-scaled.jpg",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nostrum at deleniti, magnam veniam voluptatem repudiandae. Aliquid non ullam voluptatibus porro neque, repellat, dolorem earum debitis autem sequi necessitatibus maxime, molestiae praesentium quisquam! Recusandae aspernatur harum delectus nulla consequuntur. Explicabo amet necessitatibus iusto!",
+      "SkillSet": [
+        {
+          "Skills": "Python",
+          "Rattings": 70
+        },
+        {
+          "Skills": "Angular",
+          "Rattings": 90
+        },
+        {
+          "Skills": "HTML",
+          "Rattings": 90
+        }
+      ],
+      "Hobbies": [
+        {
+          "name": "Trekking",
+          "certificate": "https://himaland.com/editorfiles/image/certificates/itb-berlin.jpg"
+        },
+        {
+          "name": "Swimming",
+          "certificate": "https://surgestrength.com/wp-content/themes/surge/dist/images/certification/cert_c064030e.png"
+        }
+      ],
+      "Certificates": [
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "HackerRank",
+          "issueDate": "06/10/2022",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://www.zarantech.com/wp-content/uploads/2017/01/Python-Certification.jpg"
+        },
+        {
+          "name": "Angular 14",
+          "issuingOrganization": "JanBaskTraininf",
+          "issueDate": "02/12/2021",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://www.simplilearn.com/ice9/certificates/Angular-Training.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "ClgID": 1204914,
+      "Name": "Name4",
+      "LastName": "",
+      "profile": "Student",
+      "ProfilePIc": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+      "Contactnumber": 1234567894,
+      "EmailId": "4@gmail.com",
+      "Course": "Course4",
+      "startingyr": 2019,
+      "EndYr": 2024,
+      "Gender": "Female",
+      "dob": "6 August 1999",
+      "Dept": "Dept4",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nostrum at deleniti, magnam veniam voluptatem repudiandae. Aliquid non ullam voluptatibus porro neque, repellat, dolorem earum debitis autem sequi necessitatibus maxime, molestiae praesentium quisquam! Recusandae aspernatur harum delectus nulla consequuntur. Explicabo amet necessitatibus iusto!",
+      "SkillSet": [
+        {
+          "Skills": "Python",
+          "Rattings": 70
+        },
+        {
+          "Skills": "Java",
+          "Rattings": 40
+        },
+        {
+          "Skills": "HTML",
+          "Rattings": 90
+        }
+      ],
+      "Address": "XYZ",
+      "Hobbies": [
+        {
+          "name": "Dancing",
+          "certificate": "https://76crb34usu-flywheel.netdna-ssl.com/wp-content/uploads/2017/11/Dance_award_certificate.jpg"
+        },
+        {
+          "name": "Singing",
+          "certificate": "https://th.bing.com/th/id/OIP.6bIy0DVmY1KnDTg3JvuIdwHaFP?pid=ImgDet&rs=1"
+        }
+      ],
+      "Certificates": [
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "HackerRank",
+          "issueDate": "06/10/2022",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://ik.imagekit.io/trainingbasket1/wp-content/uploads/2020/07/Certificate-1024x725.png"
+        },
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "JanBaskTraininf",
+          "issueDate": "06/10/2020",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://janbask.nyc3.digitaloceanspaces.com/jt/images/Python-certificate.jpg"
+        }
+      ],
+      "IsVerified": false
+    },
+    {
+      "ClgID": 1204916,
+      "id": 6,
+      "Name": "Name6",
+      "LastName": "",
+      "Address": "XYZ",
+      "Dept": "Dept5",
+      "startingyr": 2018,
+      "EndYr": 2023,
+      "Course": "Course5",
+      "EmailId": "5@gmail.com",
+      "Contactnumber": 1234567895,
+      "Gender": "Female",
+      "dob": "2 Feb. 2000",
+      "ProfilePIc": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nostrum at deleniti, magnam veniam voluptatem repudiandae. Aliquid non ullam voluptatibus porro neque, repellat, dolorem earum debitis autem sequi necessitatibus maxime, molestiae praesentium quisquam! Recusandae aspernatur harum delectus nulla consequuntur. Explicabo amet necessitatibus iusto!",
+      "SkillSet": [
+        {
+          "Skills": "Python",
+          "Rattings": 70
+        },
+        {
+          "Skills": "Java",
+          "Rattings": 40
+        },
+        {
+          "Skills": "HTML",
+          "Rattings": 90
+        }
+      ],
+      "Hobbies": [
+        {
+          "name": "Dancing",
+          "certificate": "https://76crb34usu-flywheel.netdna-ssl.com/wp-content/uploads/2017/11/Dance_award_certificate.jpg"
+        },
+        {
+          "name": "Singing",
+          "certificate": "https://th.bing.com/th/id/OIP.6bIy0DVmY1KnDTg3JvuIdwHaFP?pid=ImgDet&rs=1"
+        }
+      ],
+      "Certificates": [
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "HackerRank",
+          "issueDate": "06/10/2022",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://ik.imagekit.io/trainingbasket1/wp-content/uploads/2020/07/Certificate-1024x725.png"
+        },
+        {
+          "name": "Python(Basic)",
+          "issuingOrganization": "JanBaskTraininf",
+          "issueDate": "06/10/2020",
+          "expirationDate": "",
+          "certificateNo": "124324",
+          "credentialUrl": "https://janbask.nyc3.digitaloceanspaces.com/jt/images/Python-certificate.jpg"
+        }
+      ]
+    }
   ]
 }
