@@ -29,6 +29,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CreateUserCanDeactivateGuardService } from './dashboard/service/create-user-candeactivate-guard.service';
 import { DashService } from './auth/authservice/dash.service';
 import { ConnectModule } from './connect/connect.module';
+import { EhostelModule } from './ehostel/ehostel.module';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { ConnectModule } from './connect/connect.module';
     HttpClientModule,
     FooterModule,
     HomeModule, MatDatepickerModule, MatRadioModule,
-    ConnectModule
+    ConnectModule,
+    EhostelModule,
 
   ],
   providers: [NavbarComponent, AuthService, InterviewExperienceDBService, CompanyDbService, MockDbService, CreateUserCanDeactivateGuardService, DashService],

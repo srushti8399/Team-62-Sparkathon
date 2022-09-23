@@ -1,0 +1,24 @@
+
+<div class="whole">
+    <div class="image">
+        <!-- {{product.image}} -->
+        <img class="image-show" src="{{product.image}}" alt="">
+    </div>
+    <div class="body">
+        <div class="name">
+            {{product.name}}
+        </div>
+        <div class="description">
+            {{product.des}}
+        </div>
+        <div class="category">
+            <p>Category:{{product.category}}</p>
+        </div>
+        <div class="price">
+            <p>Price:Rs {{product.price}}</p>
+        </div>
+        <button class="btn btn-primary " (click)="handleaddtocart()"> Contact</button>
+        <button class="btn btn-primary " style="margin-left:20px" [routerLink]="['/display']"> Back</button>
+        
+    </div>
+</div>
