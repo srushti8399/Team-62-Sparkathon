@@ -28,6 +28,8 @@ import { MockDbService } from './mock/mock.db.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { CreateUserCanDeactivateGuardService } from './dashboard/service/create-user-candeactivate-guard.service';
 import { DashService } from './auth/authservice/dash.service';
+import { EhostelModule } from './ehostel/ehostel.module';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { DashService } from './auth/authservice/dash.service';
     MatProgressSpinnerModule,
     HttpClientModule,
     FooterModule,
-    HomeModule,MatDatepickerModule,MatRadioModule
+    HomeModule,MatDatepickerModule,MatRadioModule,
+    EhostelModule,
     
   ],
   providers: [NavbarComponent,AuthService,InterviewExperienceDBService,CompanyDbService,MockDbService,CreateUserCanDeactivateGuardService,DashService],

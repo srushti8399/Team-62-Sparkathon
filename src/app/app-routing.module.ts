@@ -22,6 +22,8 @@ import { BookSessionComponent } from './mock/book-session/book-session.component
 import { HomeComponent } from './home/home.component';
 import { CreateUserCanDeactivateGuardService } from './dashboard/service/create-user-candeactivate-guard.service';
 import { DashService } from './auth/authservice/dash.service';
+import { Displaydata } from './ehostel/Display/Products_UI/display.component';
+import { ProductDescriptionComponent } from './ehostel/product-description/product-description.component';
 
 const routes: Routes = [
 
@@ -51,8 +53,17 @@ const routes: Routes = [
   {path:'editcompany/:id',component:EditCompanyComponent,canActivate:[AuthService]},
   {path:'deletecompany/:id',component:DeleteCompanyComponent,canActivate:[AuthService]},
   {path:'deletecompanydialogue/:id',component:DialogDeleteComponent,canActivate:[AuthService]},
+ 
+
+  
+  {path:"display",component:Displaydata},
+  {path:"product-description",component:ProductDescriptionComponent},
+
   {path:'',component:HomeComponent,canActivate:[DashService]},
-   {path:"**",component:DashboardComponent,canActivate:[AuthService]}
+   {path:"**",component:DashboardComponent,canActivate:[AuthService]},
+
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
