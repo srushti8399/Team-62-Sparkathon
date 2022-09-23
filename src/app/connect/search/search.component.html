@@ -1,0 +1,68 @@
+<div style="margin-top: 20px;"></div>
+<form #searchForm="ngForm">
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <select class="form-select" name="category" id="category" type="search" placeholder="category"
+                aria-label="category" [(ngModel)]="category">
+                <option selected>Select By</option>
+                <option value="Name">Name</option>
+                <option value="ClgID">ClgId</option>
+            </select>
+        </div>
+
+        <div class="col-md-8 d-flex">
+            <input class="form-control" name="keyword" id="keyword" type="search" placeholder="keyword" aria-label="name"
+                [(ngModel)]="keyword">
+            <button class="btn btn-outline mx-1" style="border:#00ADB5 2px solid ; color:#00ADB5" type="submit"
+                (click)="searchStudent()">Search</button>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+    
+   
+</form>
+<div style="margin-top: 20px;"></div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <span *ngFor="let i of searchList" >
+            <mat-card (click)="profile(i.ClgID)" class="p-2" style="margin-top: 30px;">
+                <div class="d-flex">
+                    <img src="{{i.ProfilePIc}}" alt="profile_PIC" srcset=""
+                        style="width: 15vw; height: 15vw; border-radius: 100px;" class="mx-3">
+                    <div class="card-contant">
+                        <div class="certificate">
+                            <div class="details">
+                                <h1><strong>{{i.Name}}</strong></h1>
+                                <p>Course : {{i.Course}}</p>
+                                <p>Batch : {{i.startingyr}}-{{i.EndYr}}</p>
+                            </div>
+                            <span *ngFor="let j of i.Certificates">
+                                <img src="{{j.credentialUrl}}" alt="Certificate_PIC" srcset="" style="width: 8vw;">
+                            </span>
+                        </div>
+                        <hr style="width: 60vw;">
+                        <div class="skills">
+                            <span *ngFor="let j of i.SkillSet">
+                                <div class="mx-3 my-1">
+                                    <div class="card-bubble">
+                                        {{j.Skills}}
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <hr style="width: 60vw;">
+                        <div class="text-center">
+                            <button mat-flat-button style="background-color:#00ADB5;color:white;">Show Details</button>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </span>
+    </div>
+
+<div class="col-md-1"></div>
+</div>

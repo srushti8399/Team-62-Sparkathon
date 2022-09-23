@@ -1,0 +1,203 @@
+<div class="cover">
+    <div class="overlay"></div>
+</div>
+<!-- Profile Image -->
+<div class="text-center image">
+    <img class="over" src="{{user[0].ProfilePIc}}">
+    <h3><b>{{user[0].Name}}</b></h3>
+</div>
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-8 p-4 Profile">
+            <mat-card>
+                <mat-tab-group animationDuration="0ms">
+                    <mat-tab label="Profile">
+                        <div class="p-2">
+                            <h1><b>About Me<span class="material-icons " style="color: #00adb5;">
+                                        arrow_right
+                                    </span></b></h1>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0 ">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Full Name</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].Name}} {{user[0].LastName}}</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Role</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: Student</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Gender</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].Gender}}</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>College Id</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].ClgID}}</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Date Of Birth</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].dob}}</h4>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <h1 class="my-2 p-0"><b>Biography<span class="material-icons "
+                                        style="color: #00adb5;">arrow_right
+                                    </span></b></h1>
+                            <div class="row p-0 " style="width: 100%;">
+                                <h3 class="p-0" style="margin-left:20px ;">{{user[0].about}}</h3>
+                            </div>
+
+                            <mat-divider></mat-divider>
+                            <h1 class="my-2 p-0"><b>Course Details<span class="material-icons " style="color: #00adb5;">
+                                        arrow_right
+                                    </span></b></h1>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted " style="margin-left:20px ;"><b>Course</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].Course}}</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Batch</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].startingyr}}-{{user[0].EndYr}}</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Department</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].Dept}}</h4>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <h1 class="my-2"><b>Contact Details<span class="material-icons " style="color: #00adb5;">
+                                        arrow_right
+                                    </span></b></h1>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted " style="margin-left:20px ;"><b>Phone</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].Contactnumber}}</h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>E-mail</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].EmailId}} </h4>
+                                </div>
+                            </div>
+                            <div class="row p-0" style="width: 100%;">
+                                <div class="col-md-3 p-0">
+                                    <h3 class="text-muted" style="margin-left:20px ;"><b>Address</b></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <h4>: {{user[0].Address}}</h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+
+        </div>
+        <div class="col-md-4">
+            <!-- Skills -->
+            <div class=" additional">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="p-2">Skills</h1>
+                    </div>
+
+                </div>
+                <div *ngFor="let skill of user[0].SkillSet">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <h3 class="mx-3 text-dark">{{skill.Skills}}</h3>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <mat-progress-bar mode="determinate" value="{{skill.Rattings}}">
+                            </mat-progress-bar>
+                        </div>
+                        <div class="col-md-2"><span class="text-muted">{{skill.Rattings}}%</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificates -->
+            <div class="additional">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="p-2">Certification</h1>
+                    </div>
+
+                    <div *ngFor="let certificate of user[0].Certificates">
+                        <div class="row p-2">
+                            <div class="col-md-4">
+                                <img src="{{certificate.credentialUrl}}" style="height:100% ; width:100%">
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="m-0">{{certificate.name}}</h3>
+                                <h4 class="m-0 text-muted">{{certificate.issuingOrganization}}</h4>
+                                <h6>Issued on {{certificate.issueDate}}</h6>
+
+                            </div>
+                            <div class="col-md-2 p-4">
+                                <a style="color:#00ADB5 ;" aria-label="Example icon button with a open in new tab icon"
+                                    href="{{ certificate.credentialUrl}}" target="_blank">
+                                    <mat-icon>open_in_new</mat-icon>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Hobbies -->
+                <div class="additional">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1 class="p-2">Hobbies</h1>
+                        </div>
+
+                        <div *ngFor="let hobby of user[0].Hobbies">
+                            <div class="row p-2">
+                                <div class="col-md-4">
+                                    <img src="{{hobby.certificate}}" style="height:100% ; width:100%">
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="m-0 text-dark">{{hobby.name}}</h3>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- </div> -->
