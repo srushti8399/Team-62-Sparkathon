@@ -1,0 +1,68 @@
+
+
+
+
+<div class="heading-container  mb-24" style="    width: 89%;
+margin-left: 71px;">
+    <h1 class="banner-heading mb-4">
+        INTERVIEW EXPERIENCES
+    </h1>
+    <p class="banner-para">
+        Learn from experienced and make yourself ready to crack interviews.
+    </p>
+    <p class="banner-para">
+        Your 15 mins can help someone to get a job. Share your brief interview experience <a href="/create" routerLink="/create">here</a>
+    </p>
+</div>
+
+<!-- <div style="margin-top: 25px;"></div> -->
+<div class="container " style="margin-top: 20px;">
+    <div class="content" style="">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div class="wrap" fxFlex="50%" *ngFor="let obj of interviewExpArray">
+                <div class=" p-2 mb-2 bg-white rounded" style="">
+                    <mat-card class="example-card box" style="border: 1px solid grey">
+                        <mat-card-title>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    {{obj.title}}
+                                </div>
+                                <div class="col-md-2" >
+                                    <button style="margin-right:20px" mat-icon-button class="blue" class="btn btn-primary button5"
+                                        (click)="edit(obj.id)">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button  class="red" class="btn btn-danger button5"
+                                        (click)="delete(obj)">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </mat-card-title>
+                        <mat-card-subtitle>Created By: {{obj.authorName}} | {{obj.company}} | Last Updated: {{obj.date|date:'yyyy-MM-dd'}}</mat-card-subtitle>
+                        <mat-card-content>
+
+                            <p class="break" [innerHtml]="obj.description|Description:obj.description"></p>
+
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <div class="row col-md-12">
+                                <div class="col-md-3">
+                                    <button mat-raised-button class="btn btn-info"
+                                        (click)="view(obj.id)">View</button>
+                                </div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-3">
+                                      
+                                </div>
+
+                            </div>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

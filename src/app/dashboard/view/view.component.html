@@ -1,0 +1,155 @@
+<div class="container-fluid" style="display:flex;align-items: center;height: 100vh;">
+    <div class="remove box"
+        style="height:100%;width: 20%;background:linear-gradient(135deg, #6249c5 0%, #9882f3 100%);">
+        <ul style="list-style:none;margin-top:34%;color:aliceblue ;">
+            <li style="margin-bottom:10%;"><a class="txt" routerLink="/viewprofile"
+                    style="text-decoration: none;color:aliceblue ;"><i class="fas fa-qrcode"
+                        style="margin-right:5px ;"></i>View Profile</a></li>
+            <hr style="margin-bottom:10% ;">
+            <li style="margin-bottom:10%;"><a class="txt" routerLink="/editprofile"
+                    style="text-decoration: none;color:aliceblue ;"><i class="fas fa-link"
+                        style="margin-right:5px ;"></i>Edit Profile</a></li>
+            <hr style="margin-bottom:10% ;">
+            <li routerLink="/company" style="margin-bottom:10%;"><a class="txt" href="#" style="text-decoration: none;color:aliceblue ;"><i
+                        class="fas fa-stream" style="margin-right:5px ;"></i>My jobs</a></li>
+            <hr style="margin-bottom:10% ;">
+            <li><a routerLink="/mock/schedule" class="txt" style="text-decoration: none;color:aliceblue ;"><i class="fas fa-calendar-week"
+                        style="margin-right:5px ;"></i>My Interviews</a></li>
+
+        </ul>
+    </div>
+    <div style="height:400px ;width: 80%;">
+
+        <!-- test  -->
+        <div class="remove-top"
+            style="background:linear-gradient(135deg, #6249c5 0%, #9882f3 100%);display: flex;width: 100%;margin-left: 10%;">
+            <ul style="list-style:none;color:aliceblue;width: 100%;">
+                <li style="margin-top: 2%;margin-bottom: 2%;"><a routerLink="/viewprofile"
+                        style="text-decoration: none;color:aliceblue ;"><i class="fas fa-qrcode"
+                            style="margin-right:2% ;"></i>View Profile</a></li>
+                <li style="margin-bottom: 2%;"><a routerLink="/editprofile"
+                        style="text-decoration: none;color:aliceblue ;"><i class="fas fa-link"
+                            style="margin-right:2% ;"></i>Edit Profile</a></li>
+                <li style="margin-bottom: 2%;"><a href="#" style="text-decoration: none;color:aliceblue ;"><i
+                            class="fas fa-stream" style="margin-right:2% ;"></i>Forgot Password</a></li>
+                <li style="margin-bottom: 2%;"><a href="#" style="text-decoration: none;color:aliceblue ;"><i
+                            class="fas fa-calendar-week" style="margin-right:2% ;"></i>My Interviews</a></li>
+
+            </ul>
+        </div>
+
+        <!-- test  -->
+
+        <div class="container" >
+
+           
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-10">
+
+                    <div class="container tmp" >
+
+                        <div class="row">
+
+                            <!-- <div class="col-md-2"></div> -->
+                            <div class="container h-80">
+                                <div class="row d-flex  text-align: left h-100" style="width:100% ;">
+                                    <!-- <div class="col-md-1"></div> -->
+                                    <div class="col-md-10">
+
+                                        <!-- <div class="col-12 col-md-12 col-lg-0 col-xl-6"> -->
+                                        <div class="shadow mb-3 bg-white rounded">
+                                            <div class="card" style="border-radius: 15px; width: 100% !important;">
+
+                                                <div class="card-body p-5">
+                                                  <h2>Profile Details</h2>
+
+
+                                                    
+                                                    <!-- test -->
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                          <tr>
+                                                           
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">{{dataTofill.name}}</th>
+                                                            
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Email</td>
+                                                            <td>{{dataTofill.email}}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Mobile</td>
+                                                            <td  *ngIf="dataTofill.mobile!=''">{{dataTofill.mobile}}</td>
+                                                            <td *ngIf="dataTofill.mobile==''">
+                                                              <i style="color:red ;">not provided</i>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>College</td>
+                                                            <td *ngIf="dataTofill.college!=''" >{{dataTofill.college}}</td>
+                                                            <td *ngIf="dataTofill.college==''">
+                                                              <i style="color:red ;">not provided</i>
+                                                            </td>
+
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Branch</td>
+                                                            <td  *ngIf="dataTofill.branch!=''">{{dataTofill.branch}}</td>
+                                                            <td *ngIf="dataTofill.branch==''">
+                                                              <i style="color:red ;">not provided</i>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Batch</td>
+                                                            <td  *ngIf="dataTofill.batch!=''">{{dataTofill.batch}}</td>
+                                                            <td *ngIf="dataTofill.batch==''">
+                                                              <i style="color:red ;">not provided</i>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Skills</td>
+                                                            <td  *ngIf="dataTofill.skills!=''">{{dataTofill.skills}}</td>
+                                                            <td *ngIf="dataTofill.skills==''">
+                                                              <i style="color:red ;">not provided</i>
+                                                            </td>
+                                                          </tr>
+                                                          <!-- <tr>
+                                                            <td colspan="2">Larry the Bird</td>
+                                                          </tr> -->
+                                                        </tbody>
+                                                      </table>
+
+                                                      <button mat-icon-button
+                                                      routerLink="/editprofile" class="blue" style="padding:1% ;"
+                                                      class="btn mt-3 btn-primary button5">
+                                                      <mat-icon>edit</mat-icon>
+                                                  </button>
+                                                    <!-- test -->
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>

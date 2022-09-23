@@ -1,0 +1,194 @@
+<!-- <p>book-session works!</p> -->
+<div class=" p-2 text-dark bg-opacity-10 high" style="    margin-top: 21px;">
+
+
+  
+
+
+
+    <!-- <form class="example-form m-5"> -->
+      <!-- <div class=" row m-4"> -->
+        <!-- <div class="col-md-4 field-box "> -->
+  
+          <div class="row">
+            <div class="col col-head">
+            <h1 style="font-size: 30px; font-weight: bold; display: inline;" class="m-3">Book your Session now
+            </h1>
+
+            <!-- <button style="
+    height: 39px;
+    margin-right: 142px;
+    float: right;
+    border-color: mediumpurple;
+    margin-top: 1px;" class="btn btn-outline-dark"  name="submitbutton" [routerLink]="['/mock/schedule/']" ><mat-icon>arrow_back</mat-icon></button> -->
+            </div>
+            </div>
+          <form class="example-form" [formGroup]="bookSession" (ngSubmit)="submit()" style="margin-top: 20px;">
+            <div class="row">
+              
+              
+              <div class="col ">
+                 
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="firstName" value="" formControlName="fistName">
+                    <mat-error *ngIf="bookSession.get('fistName')!.errors!==null && bookSession.get('fistName')!.errors!['required']">
+                      Name is required
+                      </mat-error>
+                  </mat-form-field>
+                <!-- <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Category</mat-label>
+                  <input matInput placeholder="Ex. joy" value="{{product.category}}" >
+                </mat-form-field> -->
+  
+                <!-- <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Category</mat-label>
+                  <mat-select>
+                    <mat-option  [value]=""> -->
+                      <!-- {{product.category}} -->
+                    <!-- </mat-option>
+                  </mat-select>
+                </mat-form-field> -->
+                
+              </div>
+  
+              <div class="col col1">
+  
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Middle Name</mat-label>
+                  <input matInput placeholder="middleName" value="" formControlName="middleName">
+                  <mat-error *ngIf="bookSession.get('middleName')!.errors!==null && bookSession.get('middleName')!.errors!['required']">
+                    Middle name is required
+                    </mat-error>
+                </mat-form-field>
+              </div>
+  
+              <div class="col col1">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="lastName" value="" formControlName="lastName">
+                  <mat-error *ngIf="bookSession.get('lastName')!.errors!==null && bookSession.get('lastName')!.errors!['required']">
+                    last name is required
+                    </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+  
+  
+            <div class="row row2">
+              <div class="col">
+                <mat-form-field style="width: 70%;" appearance="fill">
+                    <mat-label>Designation</mat-label>
+                    <mat-select formControlName="designation">
+                      <mat-option *ngFor="let des of designations" [value]="des.value" >
+                        {{des.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="bookSession.get('designation')!.errors!==null && bookSession.get('designation')!.errors!['required']">
+                     Please select designation
+                      </mat-error>
+                  </mat-form-field>
+            </div>
+  
+            <div class="col col1">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>College Name</mat-label>
+              <input matInput placeholder="your college" value="" formControlName="college">
+              <mat-error *ngIf="bookSession.get('college')!.errors!==null && bookSession.get('college')!.errors!['required']">
+                college name is required
+                </mat-error>
+            </mat-form-field>
+             </div>
+  
+             <div class="col col1">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Branch</mat-label>
+              <input matInput placeholder="your branch" value="" formControlName="branch">
+              <mat-error *ngIf="bookSession.get('branch')!.errors!==null && bookSession.get('branch')!.errors!['required']">
+                brance is required
+                </mat-error>
+            </mat-form-field>
+          </div>
+          </div>
+  
+          <div class="row row2">
+            <div class="col ">
+                <!-- <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                    <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                  </div> -->
+                  <mat-form-field style="width: 70%;" appearance="fill">
+                    <mat-label>Select Mentor</mat-label>
+                    <mat-select formControlName="mentor">
+                      <mat-option *ngFor="let to of mentors" [value]="to.value" >
+                        {{to.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="bookSession.get('mentor')!.errors!==null && bookSession.get('mentor')!.errors!['required']">
+                     Please select mentor
+                      </mat-error>
+                  </mat-form-field>
+
+                </div>
+
+                <div class="col col1">
+                    <!-- <mat-form-field appearance="fill">
+                        <mat-label>Choose Time for Interview</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field> -->
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Interview slot</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="slot">
+                        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                         <mat-error *ngIf="bookSession.get('slot')!.errors!==null && bookSession.get('slot')!.errors!['required']">
+                          Please select slot
+                           </mat-error> 
+                      </mat-form-field>
+                </div>
+
+                <div class="col col1">
+                  <mat-form-field style="width: 70%;" appearance="fill">
+                    <mat-label>Topic</mat-label>
+                    <mat-select formControlName="topic">
+                      <mat-option *ngFor="let to of topics" [value]="to.value" >
+                        {{to.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="bookSession.get('topic')!.errors!==null && bookSession.get('topic')!.errors!['required']">
+                      Please select Interview topic
+                       </mat-error>
+                  </mat-form-field>
+
+                    
+                </div>
+                </div>
+
+  
+            <!-- <input type="text" value="{{EmployeeId}}" *ngIf="editMode"/> -->
+            <!-- <button  (click)="openDialog()">Update</button>
+                   -->
+                   <div style="margin-top: 26px;">
+            <!-- <button mat-raised-button type="submit" (click)="submit()" color="primary" class="btn">Submit</button> -->
+            <button type="submit" (click)="submit()" mat-raised-button color="primary">Submit</button>
+            <button class="btn btn-outline-dark" style="    margin-left: 13px;
+            margin-top: -1px;" name="submitbutton" [routerLink]="['/mock/schedule/']" >Back</button>
+          </div>
+          </form>
+  
+  
+          <!-- <h4>Student Name: {{firstName}}</h4> -->
+          <!-- <h4>Student department: {{department}}</h4> -->
+  
+  
+        <!-- </div> -->
+      <!-- </div> -->
+  
+  
+    <!-- </form> -->
+   
+              

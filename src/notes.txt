@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  top: 10%;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+  margin-top: 5%;
+  position: fixed;
+  /* myproperty */
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+section{
+  background:lightyellow url(bg.jpg) no-repeat;
+  background-position: center;
+  opacity: 0.7;
+ background-size: cover;
+  height: 90vh;
+  width: 100vw;
+  transition: all .5s;
+} 
+
+
+.fa-bars{
+    margin-top: 8%;
+}
+
+
+/* dkvndjnvj */
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+
+  .extra {
+    color: #fff !important;
+   
+}
+
+.extral{
+    color: #fff !important;
+}
+
+********************
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+
+            <div class="">
+              <div class="dropstart" role="group">
+
+                <svg
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                style="background-color: aliceblue;"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                xmlns="http://www.w3.org/2000/svg" style="width:25px ;" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"/></svg>
+               
+                <ul class="dropdown-menu">
+                 
+                  <li><a routerLink="register" class="dropdown-item" >Register</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a routerLink="login" class="dropdown-item">Login</a></li>
+                </ul>
+              </div>
+            </div>
+ 
+
+          
+          </a>
+        </li>
+
+
+
+        *************
+
+        <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        
+      <div class="col-12 col-md-10 col-lg-6 col-xl-8">
+        <div class="shadow mb-3 bg-white rounded">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <h2 class="text-uppercase  mb-3">Job Details</h2>
+            
+            
+    
+      
+        <div class="row">
+    
+          <div class="col-sm-3">
+            <h4 class="mb-0">Job Title</h4>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{viewCompany.jobtitle}}
+        </div>
+          </div>
+    
+         <hr> 
+          <div class="row">  
+        
+          <div class="col-sm-3">
+            <h4 class="mb-0">Company Name</h4>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{viewCompany.cname}}
+          </div>
+        </div>
+        <hr>
+    
+        <div class="row">
+          <div class="col-sm-3">
+            <h4 class="mb-0">Package</h4>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{viewCompany.package}}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <h4 class="mb-0">Required Qualification</h4>
+          </div>
+          <div class="col-sm-9 text-secondary">
+            {{viewCompany.qualification}}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+              <h4 class="mb-0">Experience required</h4>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{viewCompany.experience}}
+            </div>
+          </div>
+          <hr>
+        <div class="row">
+            <div class="col-sm-3">
+              <h4 class="mb-0">Candidate Type</h4>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{viewCompany.type}}
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <h4 class="mb-0">Description</h4>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{viewCompany.description}}
+            </div>
+          </div>
+          <hr>
+        <div class="row">
+          <div class="col-md-2">
+          <div class="col-sm-12">
+            <button mat-raised-button  class="btn btn-danger" (click)="deleteCompanyDetails(viewCompany.id)">Delete</button>
+          </div> </div>
+          <div class="col-md-8"></div>
+          <div class="col-md-2">
+            <div class="col-sm-12">
+          <button class="btn btn-outline-dark"  name="submitbutton" (click)="BackToCompany()" >Back</button>
+        </div>
+          </div>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+mitesh
+
+.static-section-three{
+  display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+flex-direction: column;
+-webkit-box-pack: center;
+justify-content: center;
+-webkit-box-align: center;
+align-items: center;
+
+max-width: 70rem;
+/* margin: 5rem; */
+height: 400px;
+margin-top: 50px;
+margin-left: 5rem;
+margin-right: 5rem;
+margin-bottom: 5rem;
+padding: 6rem 5rem;
+border-radius: 1.6rem;
+background: #fff;
+border: 1px solid #D2D2D6;
+}
+
+.static-section-list {
+  
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.static-section-three__container {
+  
+  display: flex;
+}
+
+.static-section-three__heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 2.9rem;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+}
+
+.static-section-three__content p  { 
+  font-size: 1rem;
+    line-height: 1.6rem;
+    margin-left: -31px;
+}
+
+.static-section-three__description {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #506b6a;
+  line-height: 3.3rem;
+  font-weight: 300;
+  margin: 2rem 0 5rem 0;
+}
+.static-section-three__banner {
+  width: 143%;
+}
+.static-section-three__banner img {
+  height: 77%;
+  width: 122%;
+}
+
+.static-section-three__logo {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+
+.para{
+ color:  hsl(229, 6%, 66%);
+}
+.name{
+  margin-left: 35px;
+  margin-top: 8px;
+}
+.colorchange{
+  padding: 17px;
+}
+
+.text{
+  color:rgb(21, 109, 196) !important ;
+
+}
+
+.name{
+  color:rgb(81, 157, 233) !important ;
+
+}
+
+.high{
+  height:470px !important;
+}

@@ -1,0 +1,149 @@
+<!-- <p>schedule works!</p> -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body>
+<div class="heading-container mb-24">
+    <h1 class="banner-heading mb-4">
+        Industry Mentor Guidance Sessions
+    </h1>
+    <p class="banner-para">
+        Live 1:1 Online Sessions with Industry Experts will help you groom for your dream job. Just schedule expert
+        mentoring & <br>feedback sessions.
+    </p>
+</div>
+
+<div class="session-booking-con py-48 top-section-content py-48 py-xs-24 ">
+    <div class="wraper pb-32">
+        <div class="schedule-card">
+            <img class="card-icon  pr-16 pr-cl-xs-0 pb-16"
+                src="https://files.codingninjas.in/mock-interviews-13373.svg">
+
+            <div class="card-content">
+                <div>
+                    <p class="p-content">Mock Interview</p>
+                    <ul>
+                        <li class="py-4 zen-body-2">Get your technical knowledge assessed from Hiring Managers
+                            </li>
+                        <li class="py-4 zen-body-2">Prepare for Job Interviews</li>
+                    </ul>
+                </div>
+                <button class="sch-button" [routerLink]="['/mock/schedule/book-session']" mat-button color="primary">Schedule Session</button>
+            </div>
+            <div class="used-sessions-banner position-absolute align-right text-align-center grey-A100 mr-20">
+                <div class="bg-violet-500 p-12 pb-0">
+                    <span class="zen-subtitle-1">1</span>
+                    <p class="zen-caption-1 p-0 m-0">Sessions taken</p>
+                </div>
+                <div id="triangle-down">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wraper pb-32">
+        <div class="schedule-card">
+            <img class="card-icon  pr-16 pr-cl-xs-0 pb-16"
+                src="https://files.codingninjas.in/profile-review-13374.svg">
+
+            <div class="card-content">
+                <div>
+                    <p class="p-content">Profile Review</p>
+                    <ul>
+                        <li class="py-4 zen-body-2">Get your technical knowledge assessed from Hiring Managers
+                            </li>
+                        <li class="py-4 zen-body-2">Prepare for Job Interviews</li>
+                    </ul>
+                </div>
+                <button class="sch-button" [routerLink]="['/mock/schedule/book-session']" mat-button color="primary">Schedule Session</button>
+            </div>
+            <div class="used-sessions-banner position-absolute align-right text-align-center grey-A100 mr-20">
+                <div class="bg-violet-500 p-12 pb-0">
+                    <span class="zen-subtitle-1">1</span>
+                    <p class="zen-caption-1 p-0 m-0">Session taken</p>
+                </div>
+                <div id="triangle-down">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wraper pb-32">
+        <div class="schedule-card">
+            <img class="card-icon  pr-16 pr-cl-xs-0 pb-16"
+                src="https://files.codingninjas.in/mock-interviews-13373.svg">
+
+            <div class="card-content">
+                <div>
+                    <p class="p-content">Project Guidance</p>
+                    <ul>
+                        <li class="py-4 zen-body-2">Get your technical knowledge assessed from Hiring Managers
+                            </li>
+                        <li class="py-4 zen-body-2">Prepare for Job Interviews</li>
+                    </ul>
+                </div>
+                <button class="sch-button" [routerLink]="['/mock/schedule/book-session']" mat-button color="primary">Schedule Session</button>
+            </div>
+            <div class="used-sessions-banner position-absolute align-right text-align-center grey-A100 mr-20">
+                <div class="bg-violet-500 p-12 pb-0">
+                    <span class="zen-subtitle-1">1</span>
+                    <p class="zen-caption-1 p-0 m-0">Sessions taken</p>
+                </div>
+                <div id="triangle-down">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="past-booking-wrapper" style="padding-bottom:30px">
+    <div class="past" >
+        <h1 style="margin-left:38px;">Previous Sessions</h1>
+    </div>
+    <hr style="width: 93%;margin-left:38px">
+    <div class="past-booking-table">
+        <table mat-table [dataSource]="pastBook" style="width: 93%;
+        margin-left: 38px;" class="mat-elevation-z8" >
+
+            <!--- Note that these columnscan be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> Discussion Topic & Time </th>
+              <td mat-cell *matCellDef="let element"> {{element.topic}} <br><small>{{element.slot}}</small> </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Mentor </th>
+              <td mat-cell *matCellDef="let element"> {{element.mentor}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Session Type </th>
+              <td mat-cell *matCellDef="let element"> {{element.topic}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Mentor feedback </th>
+              <td mat-cell *matCellDef="let element" style="color: green;"> <mat-icon>check_circle</mat-icon> </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> feedback </th>
+                <td mat-cell *matCellDef="let element"> <button style="border: none;
+                    background-color: white;" (click)="showDialogue()"><mat-icon>feedback</mat-icon></button> </td>
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</div>
+
+
+</body>
