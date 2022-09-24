@@ -23,7 +23,7 @@
         </div>
         <!-- <button class="btn btn-primary " (click)="handleaddtocart()"> Contact</button> -->
         <button mat-raised-button  class="btn btn-primary " style="margin-left:20px" [routerLink]="['/display']"> Back</button>
-        <button mat-raised-button color="warn" style="margin-left:20px" > Delete</button>
+        <button mat-raised-button color="warn" style="margin-left:20px" (click)="delete(product.id)"> Delete</button>
         
     </div>
 </div>
