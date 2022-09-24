@@ -1,0 +1,111 @@
+
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-2"><h1><b>Add Product</b></h1></div>
+    </div>
+   
+
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10">
+    <form class="bg-light" [formGroup]="add_product" (ngsubmit)='submit()'>
+
+
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Fullname</mat-label>
+            <input matInput type="text" formControlName="fullname">
+          </mat-form-field>
+    </div>
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Product Name</mat-label>
+            <input matInput type="text" formControlName="pname">
+          </mat-form-field>
+    </div>
+    <div class="col-3">
+       
+          <mat-form-field appearance="fill">
+            <mat-label>Are you staying in hostel?</mat-label>
+            <mat-select matNativeControl formControlName='hostel' required>
+              <mat-option value="Yes">Yes</mat-option>
+              <mat-option value="No">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+   
+    <div class="col-1"></div>
+
+</div>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="text" formControlName="cnumber">
+          </mat-form-field>
+    </div>
+
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput type="number"  formControlName="price">
+          </mat-form-field>
+    </div>
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <input matInput  type="textarea" formControlName="description">
+          </mat-form-field>
+    </div>
+    <div class="col-2"></div>
+<div class="row">
+    <div class="col-1"></div>
+  
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+        <mat-label>Image</mat-label>
+        <input matInput   formControlName="image" placeholder="choose file">
+       </mat-form-field> 
+    </div>
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Year</mat-label>
+            <mat-select matNativeControl formControlName='year' required>
+              <mat-option value="volvo">First</mat-option>
+              <mat-option value="Second">Second</mat-option>
+              <mat-option value="Third">Third</mat-option>
+              <mat-option value="Fourth">Fourth</mat-option>
+             
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="col-3">
+        <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <mat-select matNativeControl formControlName='type' required>
+              <mat-option value="Book">Book</mat-option>
+              <mat-option value="Products">Products</mat-option> 
+            </mat-select>
+          </mat-form-field>
+    </div>
+</div>
+    <div id='btn'class="row">
+      <div class="col-1"></div>
+      <div class="col-1"><button mat-raised-button class="btn btn-primary" (click)="submit()" >Add</button></div>
+  <div class="col-1"><button mat-raised-button class="btn btn-primary" [routerLink]="['/display']">Return</button></div>
+</div>
+</div>
+
+
+
+</form>
+  </div>
+</div>
+
+
+

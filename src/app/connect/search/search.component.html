@@ -9,6 +9,12 @@
                 <option selected>Select By</option>
                 <option value="Name">Name</option>
                 <option value="ClgID">ClgId</option>
+                <option value="Course">Course</option>
+                <option value="Dept">Department</option>
+                <option value="startingyr">Joining Year</option>
+                <option value="EndYr">Passout Year</option>
+                <option value="Address">Location</option>
+                <option value="Skills">Skills</option>
             </select>
         </div>
 
@@ -18,7 +24,7 @@
             <button class="btn btn-outline mx-1" style="border:#00ADB5 2px solid ; color:#00ADB5" type="submit"
                 (click)="searchStudent()">Search</button>
             <button class="btn btn-outline mx-1" style="border:#00ADB5 2px solid ; color:#00ADB5" type="submit"
-                (click)="reset()">Reset</button>   
+                (click)="reset()">Reset</button>
         </div>
 
         <div class="col-md-1"></div>
@@ -46,7 +52,7 @@
                                 <img src="{{j.credentialUrl}}" alt="Certificate_PIC" srcset="" style="width: 8vw;">
                             </span>
                         </div>
-                        <hr style="width: 60vw;">
+                        <hr style="width: 50vw;">
                         <div class="skills">
                             <span *ngFor="let j of i.SkillSet">
                                 <div class="mx-3 my-1">
@@ -56,7 +62,7 @@
                                 </div>
                             </span>
                         </div>
-                        <hr style="width: 60vw;">
+                        <hr style="width: 50vw;">
                         <div class="text-center">
                             <button mat-flat-button style="background-color:#00ADB5;color:white;">Show Details</button>
                         </div>

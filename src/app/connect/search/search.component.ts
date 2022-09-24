@@ -25,10 +25,18 @@ export class SearchComponent implements OnInit {
 
     this.keyword = this._router_para.snapshot.paramMap.get('keyword')
     this.category = this._router_para.snapshot.paramMap.get('category')
-    this._dataservice.searchDataByApi(this.keyword, this.category, this.ProfileURL).subscribe((data) => {
-      this.searchList = data
-      console.log(data);
-    })
+    if (this.category == "Skills") {
+      this._dataservice.searchDataByApiwithq(this.keyword, this.ProfileURL).subscribe((data) => {
+        this.searchList = data
+        console.log(data);
+      })
+
+    } else {
+      this._dataservice.searchDataByApi(this.keyword, this.category, this.ProfileURL).subscribe((data) => {
+        this.searchList = data
+        console.log(data);
+      })
+    }
   }
   profile(ClgID: any) {
     this._router.navigate(['/profile', ClgID])

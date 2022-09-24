@@ -15,10 +15,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ProductitemComponent } from './Display/Product_item_display/productitem.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { AddProductComponent } from './add-product/add-product.component';
+
+
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 
 @NgModule({
-  declarations: [Displaydata, ProductitemComponent, ProductDescriptionComponent],
+  declarations: [Displaydata, ProductitemComponent, ProductDescriptionComponent, AddProductComponent],
   imports: [
     CommonModule, BrowserAnimationsModule, RouterModule,
     MatInputModule, MatButtonModule, MatFormFieldModule, MatSelectModule, ReactiveFormsModule,
