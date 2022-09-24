@@ -17,6 +17,11 @@ export class ServiceService {
     return this._http.get<Product[]>(this.dburl)
   }
 
+
+  deleteProducts(id:any){
+    return this._http.delete<any>("http://localhost:3000/product/"+id)
+  }
+
   getProductsApibyId(id: string): Observable<any> {
     let subject = new ReplaySubject();
     this._http.get<Product[]>(this.dburl).subscribe((data) => {

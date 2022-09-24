@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessService } from '../service/Product_Add_Messanger/mess.service';
 import { ServiceService } from '../service/service.service';
 
@@ -11,7 +11,7 @@ import { ServiceService } from '../service/service.service';
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  constructor(public activeRoute:ActivatedRoute, public service:ServiceService, private _msgser:MessService,private  _snackBar:MatSnackBar) { }
+  constructor(public activeRoute:ActivatedRoute, public service:ServiceService, private _msgser:MessService,private  _snackBar:MatSnackBar,private _router:Router) { }
 
   product:any = {}
   ngOnInit(): void {
@@ -28,6 +28,19 @@ export class ProductDescriptionComponent implements OnInit {
   padded:string|null=''
 
 public lstadd:any=[]
+
+  delete(id:any)
+  {
+    this.service.deleteProducts(id).subscribe({
+      next:(res)=>{
+        window.location.reload()
+        
+      }
+    })
+    this._router.navigate(['/display'])
+  }
+
+
   handleaddtocart(){
   //   if(localStorage.getItem('logoutvalue')==='true')
   //   {
