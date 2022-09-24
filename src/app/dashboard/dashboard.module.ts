@@ -15,6 +15,9 @@ import { FooterModule } from '../footer/footer.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { CreateUserCanDeactivateGuardService } from './service/create-user-candeactivate-guard.service';
 
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -31,7 +34,8 @@ import { CreateUserCanDeactivateGuardService } from './service/create-user-cande
     MatSelectModule,
     RouterModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule
   ],
   providers:[CreateUserCanDeactivateGuardService]
 })

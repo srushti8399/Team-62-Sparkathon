@@ -20,6 +20,24 @@
 
 
   
+@media only screen and (max-width: 1978px) and (min-width: 0px) {
+	.heightP{
+    height:140vh !important;
+  }
+  
+  } 
+
+   
+@media only screen and (min-width: 1979px) {
+	.heightP{
+    height:100vh !important;
+    /* background-color: yellow; */
+  }
+  
+  } 
+  /* //1978px */
+
+  
 .box {
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -41,3 +59,11 @@
   margin-left: 7%;
 }
 
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
