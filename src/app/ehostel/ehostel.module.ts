@@ -13,21 +13,20 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductitemComponent } from './Display/Product_item_display/productitem.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
 
 
 @NgModule({
-  declarations: [Displaydata,ProductitemComponent,ProductDescriptionComponent],
+  declarations: [Displaydata, ProductitemComponent, ProductDescriptionComponent],
   imports: [
-    CommonModule,BrowserAnimationsModule,RouterModule,
-    MatInputModule,MatButtonModule,MatFormFieldModule,MatSelectModule,ReactiveFormsModule,
-     HttpClientInMemoryWebApiModule.forRoot(ProductApiService),HttpClientModule,FormsModule,
-     MatSnackBarModule
+    CommonModule, BrowserAnimationsModule, RouterModule,
+    MatInputModule, MatButtonModule, MatFormFieldModule, MatSelectModule, ReactiveFormsModule,
+    HttpClientModule, FormsModule,
+    MatSnackBarModule
   ],
-  exports:[Displaydata,ProductitemComponent,ProductDescriptionComponent],
-  providers: [ServiceService,MessService,],
+  exports: [Displaydata, ProductitemComponent, ProductDescriptionComponent],
+  providers: [ServiceService, MessService,],
 })
 
 export class EhostelModule { }

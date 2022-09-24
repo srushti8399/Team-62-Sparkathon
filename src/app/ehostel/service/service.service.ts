@@ -7,39 +7,37 @@ import { Product } from 'src/Models/product';
   providedIn: 'root'
 })
 export class ServiceService {
-userurl:string='api/product';
+  dburl: string = "http://localhost:3000/product"
 
-dburl:string="http://localhost:3000/profile"
+  s$ = new Subject();
+  uniquepro: any
+  constructor(private _http: HttpClient) { }
 
-s$=new Subject();
-uniquepro:any
-constructor(private _http:HttpClient) { }
+  getProducts(): Observable<Product[]> {
+    return this._http.get<Product[]>(this.dburl)
+  }
 
-getProducts():Observable<Product[]>{
-  return this._http.get<Product[]>(this.userurl)
-}
+  getProductsApibyId(id: string): Observable<any> {
+    let subject = new ReplaySubject();
+    this._http.get<Product[]>(this.dburl).subscribe((data) => {
+      this.uniquepro = data.find(x => x.id == id);
+      subject.next(this.uniquepro);
+      console.log(this.uniquepro);
+      subject.complete();
+    })
+    return subject;
+  }
+  getdb() {
+    // const url='http://localhost:3000/profile';
 
-getProductsApibyId(id:string):Observable<any>{
-  let subject = new ReplaySubject();
-  this._http.get<Product[]>(this.userurl).subscribe((data)=>{
-    this.uniquepro = data.find(x=>x.id==id);
-    subject.next(this.uniquepro);
-    console.log(this.uniquepro);
-    subject.complete();
-  })
-  return subject;
-}
-getdb(){
-  // const url='http://localhost:3000/profile';
+    //  this._http.get("http://localhost:3000//comments").subscribe((data:any)=>{
+    //   console.log(data);
+    //  })
 
-  //  this._http.get("http://localhost:3000//comments").subscribe((data:any)=>{
-  //   console.log(data);
-  //  })
+    //  this._http.get(url).subscribe((data:any)=>{
+    //   console.log(data);
 
-  //  this._http.get(url).subscribe((data:any)=>{
-  //   console.log(data);
-    
-  //  })
-}
- 
+    //  })
+  }
+
 };
