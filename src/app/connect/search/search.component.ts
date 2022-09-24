@@ -39,4 +39,8 @@ export class SearchComponent implements OnInit {
     this._router.navigate(['/searchResults', this.keyword, this.category])
   }
 
+  reset() {
+    location.replace("/search")
+  }
+
 }
