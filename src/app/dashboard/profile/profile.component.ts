@@ -95,3 +95,51 @@ BatchesArr:any[]=[
 
 
 }
+
+
+// public signupForm!: FormGroup
+// user: any = [];
+// URL: any = "http://localhost:3000/UserProfile"
+// username: any = ""
+// updatedData: any[] = []
+
+
+
+// constructor(private formBuilder: FormBuilder, private router: Router, private _data: DataService) { }
+
+// ngOnInit(): void {
+//   this.signupForm = this.formBuilder.group({
+//     CollegeId: [null, [Validators.minLength(1), Validators.maxLength(7), Validators.required]],
+//     FirstName: [null, Validators.required],
+//     LastName: [null, Validators.required],
+
+//     Contactnumber: [null, [Validators.minLength(1), Validators.maxLength(10), Validators.required]],
+//     EmailId: [null, Validators.required, Validators.email],
+//     Course: ['', Validators.required],
+//     startingyr: ['', Validators.required],
+//     EndYr: ['', Validators.required],
+//     Department: ['', Validators.required],
+//     Profile: ['Student'],
+
+
+
+
+
+//   })
+// }
+
+// Register(): void {
+//   console.log(this.signupForm.value)
+//     console.log(this.signupForm.value.Password)
+//     console.log(this.signupForm.value.CollegeId)
+//     this._data.postDataByApi(this.signupForm.value, this.URL).subscribe((data: any) => {
+//     this.user = data
+//     console.log(this.user)
+
+
+
+
+//   })
+
+// }
+

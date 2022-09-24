@@ -151,3 +151,142 @@
 
 
 
+
+<!-- <div class="registeration">
+    <div class="overlay">
+        <div class="text-center">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <mat-card style="margin-top:60px ; margin-bottom: 60px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);">
+                        <div class="row">
+                            <h1 class="p-2"> Registration </h1>
+                            <div class="container">
+                                <form [formGroup]="signupForm" (ngSubmit)="Register()">
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">College Id</mat-label>
+                                                <input matInput type="text" formControlName="CollegeId">
+                                                <mat-error
+                                                    *ngIf="signupForm.get('CollegeId')!.errors!==null &&  signupForm.get('CollegeId')!.errors!['minlength']">
+                                                    College Id must be greater than 1.
+                                                </mat-error>
+                                                <mat-error
+                                                    *ngIf="signupForm.get('CollegeId')!.errors!==null &&  signupForm.get('CollegeId')!.errors!['maxlength']">
+                                                    College Id must be less than 7.
+                                                </mat-error>
+                                                <mat-error
+                                                    *ngIf="signupForm.get('CollegeId')!.errors!==null &&  signupForm.get('CollegeId')!.errors!['required']">
+                                                    College Id is required
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">First Name</mat-label>
+                                                <input matInput type="text" formControlName="FirstName">
+                                                <mat-error> First Name is required</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100% ;">
+                                                <mat-label style="color:#00ADB5 ;">Last Name</mat-label>
+                                                <input matInput type="text" formControlName="LastName">
+                                                <mat-error> Last Name is required</mat-error>
+
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">Contact Number</mat-label>
+                                                <input matInput type="text" formControlName="Contactnumber">
+                                                <mat-error
+                                                    *ngIf="signupForm.get('Contactnumber')!.errors!==null &&  signupForm.get('Contactnumber')!.errors!['minlength']">
+                                                    Contact Number must be greater than 1.
+                                                </mat-error>
+                                                <mat-error
+                                                    *ngIf="signupForm.get('Contactnumber')!.errors!==null &&  signupForm.get('Contactnumber')!.errors!['maxlength']">
+                                                    Contact Number must be less than 10.
+                                                </mat-error>
+                                                <mat-error
+                                                    *ngIf="signupForm.get('Contactnumber')!.errors!==null &&  signupForm.get('Contactnumber')!.errors!['required']">
+                                                    Contact Number is required
+                                                </mat-error>
+
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">Email</mat-label>
+                                                <input matInput type="text" formControlName="EmailId">
+                                                <mat-error
+                                                    *ngIf="signupForm.get('EmailId')!.errors!==null &&  signupForm.get('EmailId')!.errors!['required']">
+                                                    Email is required </mat-error>
+                                                <mat-error
+                                                    *ngIf="!signupForm.get('EmailId')!.errors!==null &&  signupForm.get('EmailId')!.errors!['emailmismatch']">
+                                                    Invalid Email
+                                                </mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">Course</mat-label>
+                                                <input matInput type="text" formControlName="Course">
+                                                <mat-error>Course is required</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">Starting year</mat-label>
+                                                <input matInput type="text" formControlName="startingyr">
+                                                <mat-error>starting year is required</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">End year</mat-label>
+                                                <input matInput type="text" formControlName="EndYr">
+                                                <mat-error>End year is required</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <mat-form-field class="example-full-width" appearance="outline"
+                                                style="width:100%;">
+                                                <mat-label style="color:#00ADB5 ;">Department</mat-label>
+                                                <input matInput type="text" formControlName="Department">
+                                                <mat-error>Department is required</mat-error>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-md-4"></div>
+                                    </div>
+                                    <div class="my-2 mx-2">
+                                        <button mat-raised-button
+                                            style="background-color:#00ADB5 ; color: #EEEEEE; height: 40px; width: 150px; border: 0px;">Register</button>
+                                        <br>
+                                        <a href="#" style=" color:white; height: 40px; width: 250px; border: 0px;"
+                                            routerLink="/login/signin">Already have an Account?Login</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+        </div>
+    </div> -->
