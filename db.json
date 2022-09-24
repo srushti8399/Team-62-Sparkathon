@@ -539,5 +539,31 @@
       ]
     }
   ],
-  "product": []
+  
+  "product": [
+    {
+      "fullname": "Srushti Deshpande",
+      "pname": "Maggie",
+      "year": "Fourth",
+      "hostel": "Yes",
+      "cnumber": "1234567890",
+      "price": 20,
+      "description": "big packet available",
+      "image": "https://rukminim1.flixcart.com/image/416/416/ki3gknk0/noodle/z/l/u/840-maggie-masala-noodles-12-instant-noodles-nestle-original-imafxym3qfnvhksa.jpeg?q=70",
+      "type": "Products",
+      "id": 1
+    },
+    {
+      "fullname": "Srushti Deshpande",
+      "pname": "Maggie",
+      "year": "Fourth",
+      "hostel": "Yes",
+      "cnumber": "1234567890",
+      "price": 20,
+      "description": "big packet available",
+      "image": "https://rukminim1.flixcart.com/image/416/416/ki3gknk0/noodle/z/l/u/840-maggie-masala-noodles-12-instant-noodles-nestle-original-imafxym3qfnvhksa.jpeg?q=70",
+      "type": "Products",
+      "id": 2
+    }
+  ]
 }
