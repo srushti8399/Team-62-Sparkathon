@@ -13,22 +13,24 @@
         </div>
 
         <div class="col-md-8 d-flex">
-            <input class="form-control" name="keyword" id="keyword" type="search" placeholder="keyword" aria-label="name"
-                [(ngModel)]="keyword">
+            <input class="form-control" name="keyword" id="keyword" type="search" placeholder="keyword"
+                aria-label="name" [(ngModel)]="keyword">
             <button class="btn btn-outline mx-1" style="border:#00ADB5 2px solid ; color:#00ADB5" type="submit"
                 (click)="searchStudent()">Search</button>
+            <button class="btn btn-outline mx-1" style="border:#00ADB5 2px solid ; color:#00ADB5" type="submit"
+                (click)="reset()">Reset</button>   
         </div>
 
         <div class="col-md-1"></div>
     </div>
-    
-   
+
+
 </form>
 <div style="margin-top: 20px;"></div>
 <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-        <span *ngFor="let i of searchList" >
+        <span *ngFor="let i of searchList">
             <mat-card (click)="profile(i.ClgID)" class="p-2" style="margin-top: 30px;">
                 <div class="d-flex">
                     <img src="{{i.ProfilePIc}}" alt="profile_PIC" srcset=""
@@ -64,5 +66,5 @@
         </span>
     </div>
 
-<div class="col-md-1"></div>
+    <div class="col-md-1"></div>
 </div>
