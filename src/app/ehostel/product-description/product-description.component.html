@@ -12,13 +12,18 @@
             {{product.des}}
         </div>
         <div class="category">
-            <p>Category:{{product.category}}</p>
+            Owner details
+            <p></p>
+            <p>Name:{{product.fullname}}</p>
+            <p>Contact:{{product.cnumber}}</p>
+            <p>Year:{{product.year}}</p>
         </div>
         <div class="price">
             <p>Price:Rs {{product.price}}</p>
         </div>
-        <button class="btn btn-primary " (click)="handleaddtocart()"> Contact</button>
-        <button class="btn btn-primary " style="margin-left:20px" [routerLink]="['/display']"> Back</button>
+        <!-- <button class="btn btn-primary " (click)="handleaddtocart()"> Contact</button> -->
+        <button mat-raised-button  class="btn btn-primary " style="margin-left:20px" [routerLink]="['/display']"> Back</button>
+        <button mat-raised-button color="warn" style="margin-left:20px" > Delete</button>
         
     </div>
 </div>

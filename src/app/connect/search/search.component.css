@@ -1,0 +1,55 @@
+mat-card {
+    width: 73vw;
+    margin-top: 10px;
+    margin-left: 5vw;
+    display: flex;
+}
+
+.card-contant {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.skills {
+    display: flex;
+    width: 70vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.certificate {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.card-bubble {
+    width: 140px;
+    height: 40px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    background: rgb(241 241 241);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: #0006ff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+mat-card:hover {
+    background: rgb(188, 188, 188);
+}

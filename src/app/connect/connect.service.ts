@@ -37,4 +37,9 @@ export class ConnectService {
       pipe(catchError(this.handleError))
   }
 
+  searchDataByApiwithq(searchName: string, URL: any) {
+    return this._http.get(`${URL}?q=${searchName}`).
+      pipe(catchError(this.handleError))
+  }
+
 }

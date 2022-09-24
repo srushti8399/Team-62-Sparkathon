@@ -26,6 +26,7 @@ import { ConnectprofileComponent } from './connect/connectprofile/connectprofile
 import { SearchComponent } from './connect/search/search.component';
 import { Displaydata } from './ehostel/Display/Products_UI/display.component';
 import { ProductDescriptionComponent } from './ehostel/product-description/product-description.component';
+import { AddProductComponent } from './ehostel/add-product/add-product.component';
 
 const routes: Routes = [
   { path: "search", component: SearchComponent, canActivate: [] },
@@ -61,7 +62,7 @@ const routes: Routes = [
   { path: 'deletecompanydialogue/:id', component: DialogDeleteComponent, canActivate: [AuthService] },
  
 
-  
+  {path:"add",component:AddProductComponent},
   {path:"display",component:Displaydata},
   {path:"product-description",component:ProductDescriptionComponent},
 

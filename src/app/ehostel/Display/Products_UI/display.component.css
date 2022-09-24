@@ -13,14 +13,25 @@
     /* background-color: chartreuse; */
 }
 
-.all{
+.all{   
     position: absolute;
     width: 100px;
     height: 100px;
    
     left: 260px;
 }
+#add{
+    position: absolute;
+    top:70px;
+    right:30px;
+}
+.main{
+    width: 100%;
+    height: 500px;
 
+    position: relative;
+    margin-top: 40px;
+}
 .all-image{
     width: 100%;
 }
@@ -88,12 +99,7 @@ text-align: center;
     
 }
 
-.main{
-    width: 100%;
-    height: 500px;
 
-    position: relative;
-}
 
 .filter{
     position: absolute;
