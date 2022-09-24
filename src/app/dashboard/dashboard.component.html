@@ -82,6 +82,90 @@
  
 </div>
 
+<div class="container mt-5 high imptwo" >
+   <div class="row">
+      <div class="col-md-4 col-sm-12">
+         <div class="card"> 
+            <div class="img">
+               <mat-spinner style="position:absolute;top:20%;left:30%" *ngIf="loadingone" class="spinner" [diameter]="40" ></mat-spinner>
+               <img [hidden]="loadingone" (load)="onLoadOne()" src="https://www.globalcareercounsellor.com/blog/wp-content/uploads/2021/01/the-importance-of-networking.jpg" />
+            </div>
+            <div class="top-text">
+               <div class="name"> 
+                  Explore your contacts
+               </div>
+               <p class="colorchange">
+                  Let's connect with anyone
+               </p>
+            </div>
+            
+            <div class="bottom-text">
+               <div class="text">
+                  Want to connect with alumni, seniors as well with juniors then just search and connect with them. Make connections and explore contacts.
+                              </div>
+               <div class="btn">
+                  <a routerLink="/search">Read more</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+         <div class="card">
+            <div class="img">
+               <mat-spinner style="position:absolute;top:20%;left:30%" *ngIf="loadingtwo" class="spinner" [diameter]="40" ></mat-spinner>
+
+               <img [hidden]="loadingtwo" (load)="onLoadTwo()" src="https://thumbs.dreamstime.com/b/sharing-books-hand-closeup-giving-book-outdoors-sharing-books-hand-closeup-giving-book-246353328.jpg">
+            </div>
+            <div class="top-text">
+               <div class="name">
+                  Extend a helping hand.
+               </div>
+               <p class="colorchange">
+                  Buy and sell Books
+               </p>
+            </div>
+            <div class="bottom-text">
+               <div class="text">
+               Help college mates by sharing notes and books here. One can sell used books and also buy books from anyone belonging to your college.
+               </div>
+               <div class="btn">
+                  <a routerLink="/display">Read more</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+         <div class="card">
+            <div class="img">
+               <mat-spinner style="position:absolute;top:20%;left:30%" *ngIf="loadingthree" class="spinner" [diameter]="40" ></mat-spinner>
+
+               <img [hidden]="loadingthree" (load)="onLoadThree()" src="https://blog.shift4shop.com/hubfs/iStock-1051616786.jpg">
+            </div>
+            <div class="top-text">
+               <div class="name">
+                   Sell your goods
+                   
+               </div>
+               <p class="colorchange">
+                  Buy and sell goods
+               </p>
+            </div>
+            <div class="bottom-text">
+               <div class="text">
+              Buy and sell goods in hostel and get delivery at your doorsteps withand enhanin hours. It helps to build hostel ecommerce.
+               </div>
+               <div class="btn">
+                  <a routerLink="/display">Read more</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+  
+   
+ 
+</div>
+
 <br>
 <br>
 <br>
